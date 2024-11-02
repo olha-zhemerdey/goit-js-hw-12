@@ -3,7 +3,13 @@
   min-width: 320px;
   max-width: 375px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
