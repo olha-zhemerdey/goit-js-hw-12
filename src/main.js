@@ -28,7 +28,7 @@ async function submitForm(e) {
   loader.style.display = 'block';
   gallery.innerHTML = '';
   searchPoint = e.target.elements.input.value.trim();
-
+  loadBtn.classList.add('is-hidden');
   if (searchPoint.length === 0) {
     loader.style.display = 'none';
     return iziToast.error({
@@ -46,7 +46,6 @@ async function submitForm(e) {
   const res = await getPhotos(searchPoint, page);
   try {
     if (res.hits.length === 0) {
-      loadBtn.classList.add('is-hidden');
       gallery.innerHTML = '';
       return iziToast.error({
         title: 'Error',
